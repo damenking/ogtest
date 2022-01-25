@@ -7,11 +7,10 @@
   <body>
     <h1>hello!</h1>
   </body>
-  <script type="text/javascript">
-    document
-      .getElementsByTagName("head")[0]
-      .appendChild(
-        '<meta name="og:description" content="this is a description">'
-      );
+  <script>
+    var el = document.createElement("meta");
+    el.setAttribute("property", "og:description");
+    el.content = "this is a description";
+    document.getElementsByTagName("head")[0].appendChild(el);
   </script>
 </html>
